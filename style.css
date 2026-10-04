@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  color: #222;
+  background: #fff;
+  font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", P052, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 4rem;
+}
+
+a {
+  color: #4b3c94;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  padding: 0.4rem 0 1.1rem;
+  margin-bottom: 2.25rem;
+  border-bottom: 1px solid #e3e0ea;
+}
+
+nav a {
+  padding: 0.3rem 1.05rem;
+  border: 1px solid #d6d0e8;
+  border-radius: 6px;
+  color: #4b3c94;
+}
+
+nav a:hover {
+  background: #f3f0fa;
+  border-color: #b8afd9;
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  background: #232136;
+  border-color: #232136;
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  font-weight: normal;
+  line-height: 1.25;
+  color: #232136;
+}
+
+h2 {
+  margin: 2rem 0 0.75rem;
+  font-size: 1.35rem;
+  font-weight: normal;
+  color: #232136;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+hr {
+  margin: 1.1rem 0 1.4rem;
+  border: 0;
+  border-top: 1px solid #e3e0ea;
+}
+
+.muted {
+  color: #666;
+}
+
+.math {
+  font-family: "Cambria Math", "STIX Two Math", "Noto Sans Math", serif;
+}
+
+/* Home: text with the photo on the right */
+.home {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.home-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.photo {
+  flex: none;
+  width: 210px;
+  height: 210px;
+  border-radius: 3px;
+}
+
+/* Papers and teaching */
+.list {
+  padding-left: 1.5rem;
+}
+
+.list li {
+  margin-bottom: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 17px;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+
+  .photo {
+    width: 170px;
+    height: 170px;
+  }
+}

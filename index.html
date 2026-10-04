@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Xinyu Shao</title>
+  <meta name="description" content="Homepage of Xinyu Shao, Leibniz Universität Hannover.">
+  <meta property="og:title" content="Xinyu Shao">
+  <meta property="og:image" content="https://xshaomath.github.io/homepage/photo.jpg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <nav>
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+    </nav>
+
+    <div class="home">
+      <div class="home-text">
+        <h1>Xinyu Shao</h1>
+        <hr>
+        <p>
+          I am a <span lang="de">wissenschaftlicher Mitarbeiter</span> (postdoc) at the
+          <a href="https://www.iazd.uni-hannover.de/" lang="de">Institut für Algebra, Zahlentheorie und Diskrete Mathematik</a>,
+          Leibniz Universität Hannover, in the <i>p</i>-adic geometry group of
+          <a href="https://bheuer.github.io/">Prof. Dr. Ben Heuer</a>.
+        </p>
+        <p>
+          Previously, I was a Ph.D. student at Sorbonne Université, within the
+          <span lang="fr">Institut de Mathématiques de Jussieu – Paris Rive Gauche</span>, under the supervision of
+          <a href="https://webusers.imj-prg.fr/~wieslawa.niziol/">Wiesława Nizioł</a>.
+        </p>
+        <p>
+          Research interests: <i>p</i>-adic Hodge theory; arithmetic geometry; logarithmic geometry, anabelian geometry; <i>p</i>-adic local Langlands.
+        </p>
+        <p>
+          Email: <span id="email">xinyu [dot] shao [a] math [dot] uni-hannover [dot] de</span>
+        </p>
+      </div>
+      <img class="photo" src="photo.jpg" width="800" height="800" alt="Xinyu Shao">
+    </div>
+  </div>
+
+  <script>
+    // Show the address as a mailto link; without JavaScript the obfuscated form stays.
+    (function () {
+      var address = ["xinyu.shao", "math.uni-hannover.de"].join("@");
+      var link = document.createElement("a");
+      link.href = "mailto:" + address;
+      link.textContent = address;
+      document.getElementById("email").replaceChildren(link);
+    })();
+  </script>
+</body>
+</html>
