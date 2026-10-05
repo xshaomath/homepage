@@ -7,14 +7,14 @@ body {
   color: #222;
   background: #fff;
   font-family: "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", P052, Georgia, serif;
-  font-size: clamp(18px, calc(16px + 0.3vw), 24px);
+  font-size: clamp(1.125rem, calc(1rem + 0.3vw), 1.3125rem);
   line-height: 1.65;
 }
 
 .page {
-  width: min(92%, 92rem);
+  width: min(90%, 68rem);
   margin: 0 auto;
-  padding: clamp(1.5rem, 3vw, 3.5rem) 0 4rem;
+  padding: clamp(1.5rem, 3vw, 3rem) 0 4rem;
 }
 
 a {
@@ -37,8 +37,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  padding: 0.4rem 0 1.35rem;
-  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  padding: 0.4rem 0 1.1rem;
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
   border-bottom: 1px solid #e3e0ea;
 }
 
@@ -70,8 +70,8 @@ h1 {
 }
 
 h2 {
-  margin: 2rem 0 0.75rem;
-  font-size: 1.35rem;
+  margin: 2.25rem 0 0.75rem;
+  font-size: 1.2em;
   font-weight: normal;
   color: #232136;
 }
@@ -97,24 +97,40 @@ hr {
 /* Home: text with the photo on the right */
 .home {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) clamp(260px, 25vw, 420px);
-  align-items: flex-start;
-  gap: clamp(2rem, 5vw, 5rem);
+  grid-template-columns: minmax(0, 1fr) clamp(17.5rem, 26vw, 21rem);
+  grid-template-areas: "heading photo" "text photo";
+  align-items: start;
+  column-gap: clamp(2rem, 4.5vw, 3.5rem);
+}
+
+.home-heading {
+  grid-area: heading;
+  max-width: 68ch;
 }
 
 .home-text {
+  grid-area: text;
   min-width: 0;
   max-width: 68ch;
 }
 
 .photo {
+  grid-area: photo;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 3px 16px rgb(35 33 54 / 7%);
+}
+
+.photo img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 1;
+  height: 100%;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 6px 24px rgb(35 33 54 / 10%);
+  object-position: center bottom;
+  transform: scale(1.3);
+  transform-origin: center bottom;
 }
 
 .contact {
@@ -125,17 +141,23 @@ hr {
 
 /* Papers and teaching */
 .list {
+  margin: 0.75rem 0 0;
   padding-left: 1.5rem;
-  max-width: 78ch;
+  max-width: 72ch;
+  line-height: 1.55;
 }
 
 .list li {
   margin-bottom: 1.3rem;
 }
 
-@media (max-width: 760px) {
+.list .muted {
+  font-size: 0.93em;
+}
+
+@media (max-width: 840px) {
   body {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .page {
@@ -144,12 +166,12 @@ hr {
 
   .home {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-areas: "heading" "photo" "text";
   }
 
   .photo {
-    grid-row: 1;
-    width: min(64vw, 280px);
+    width: min(100%, 18rem);
+    margin-bottom: 1.5rem;
   }
 
   nav {
