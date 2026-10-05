@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Xinyu Shao</title>
   <meta name="description" content="Homepage of Xinyu Shao, Leibniz Universität Hannover.">
+  <meta name="robots" content="index, follow">
+  <meta name="google-site-verification" content="hRmdlmigr_lonokCQtuwBH7LkciAnvLF2CJZ0TJHJNI">
+  <link rel="canonical" href="https://xshaomath.github.io/homepage/">
   <meta property="og:title" content="Xinyu Shao">
   <meta property="og:image" content="https://xshaomath.github.io/homepage/photo.jpg">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261005-2">
 </head>
 <body>
   <div class="page">
@@ -36,32 +39,12 @@
           Research interests: <i>p</i>-adic Hodge theory; arithmetic geometry; logarithmic geometry, anabelian geometry; <i>p</i>-adic local Langlands.
         </p>
         <p id="contact" class="contact">
-          Email:
-          <button id="show-email" class="email-button" type="button" aria-controls="email" hidden>Show email</button>
-          <span id="email" aria-live="polite"><span id="email-fallback">xinyu [dot] shao [at] math [dot] uni-hannover [dot] de</span></span>
+          Email: xinyu.shao [at] math.uni-hannover.de
         </p>
       </div>
       <img class="photo" src="photo.jpg" width="800" height="800" alt="Xinyu Shao">
     </div>
   </div>
 
-  <script>
-    // Reveal the address only after a visitor requests it.
-    (function () {
-      var button = document.getElementById("show-email");
-      document.getElementById("email-fallback").hidden = true;
-      button.hidden = false;
-      button.addEventListener("click", function () {
-        var codes = [120, 105, 110, 121, 117, 46, 115, 104, 97, 111, 64, 109, 97, 116, 104, 46, 117, 110, 105, 45, 104, 97, 110, 110, 111, 118, 101, 114, 46, 100, 101];
-        var address = String.fromCharCode.apply(null, codes);
-        var link = document.createElement("a");
-        link.href = "mailto:" + address;
-        link.textContent = address;
-        document.getElementById("email").replaceChildren(link);
-        button.hidden = true;
-        link.focus();
-      }, { once: true });
-    })();
-  </script>
 </body>
 </html>

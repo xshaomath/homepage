@@ -123,21 +123,6 @@ hr {
   scroll-margin-top: 2rem;
 }
 
-.email-button {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: #4b3c94;
-  font: inherit;
-  cursor: pointer;
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
-}
-
-[hidden] {
-  display: none !important;
-}
-
 /* Papers and teaching */
 .list {
   padding-left: 1.5rem;
